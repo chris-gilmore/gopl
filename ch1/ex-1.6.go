@@ -55,7 +55,8 @@ func lissajous(out io.Writer) {
 		}
 		phase += 0.1
 		ci += 1
-		if ci == 4 {
+		// could have just used len(palette)
+		if int(ci) >= len(img.ColorModel().(color.Palette)) {
 			ci = 1
 		}
 		anim.Delay = append(anim.Delay, delay)
