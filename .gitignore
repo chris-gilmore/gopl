@@ -1,1 +1,4 @@
 .gopl
+main
+*.test
+*.log

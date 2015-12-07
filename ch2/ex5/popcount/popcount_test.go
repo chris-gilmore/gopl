@@ -1,6 +1,7 @@
 package popcount
 
 import (
+	"fmt"
 	"testing"
 )
 
@@ -54,6 +55,14 @@ func BenchmarkBitCount(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		BitCount(0x1234567890ABCDEF)
 	}
+}
+
+// -- Examples --
+
+func ExampleBitCount() {
+	fmt.Println(BitCount(0x1234567890ABCDEF))
+	// Output:
+	// 32
 }
 
 // $ go test -bench=.
