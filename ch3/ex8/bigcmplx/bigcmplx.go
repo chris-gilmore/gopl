@@ -10,3 +10,11 @@ func NewBigFloat(r, i *big.Float) *BigFloat {
 	z.imag.Copy(i)
 	return z
 }
+
+// NewBigRat ...
+func NewBigRat(r, i *big.Rat) *BigRat {
+	z := new(BigRat)
+	z.real.Set(r)
+	z.imag.Set(i)
+	return z
+}
