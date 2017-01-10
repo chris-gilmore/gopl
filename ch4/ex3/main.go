@@ -10,7 +10,7 @@ func main() {
 	fmt.Println(a) // "[5 4 3 2 1 0]"
 }
 
-// reverse reverses a slice of ints in place.
+// reverse reverses an array of ints in place.
 func reverse(a *[arraySize]int) {
 	for i, j := 0, len(a)-1; i < j; i, j = i+1, j-1 {
 		a[i], a[j] = a[j], a[i]
